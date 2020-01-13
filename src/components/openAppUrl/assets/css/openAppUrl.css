@@ -1,0 +1,50 @@
+.full-screen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .dn {
+    display: none;
+  }
+  .mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    color: #fff;
+  }
+  .floatColor {
+    color: #fff;
+    font-size: 43.3px;
+    position: absolute;
+  }
+  .floatLt {
+    top: 3.84em;
+    left: .8em;
+  }
+  .floatLb {
+    top: 6em;
+    left: 0.8em;
+    display: flex;
+    align-items: center;
+  }
+  .floatLb img {
+    margin: 0 8px;
+    width: 1.2em;
+  }
+  .jiantou {
+    width: 173px;
+    position: absolute;
+    right: 66.7px;
+    top: 70px;
+  }
+  .am-modal-body {
+    color: #999999 !important;
+  }
+  

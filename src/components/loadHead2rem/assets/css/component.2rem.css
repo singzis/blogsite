@@ -1,0 +1,64 @@
+.loadHead {
+  width: 100%;
+  display: flex;
+  flex: none;
+  background: rgba(0, 0, 0, 0.5);
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+}
+.loadHead-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+.loadHead-delete {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 13.5px;
+}
+.loadHead-loadTitle {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+}
+.loadHead-logo {
+  height: 31px;
+  width: 31px;
+  margin-right: 10px;
+}
+.loadHead-wordlogowrapper {
+  display: flex;
+  flex-direction: column;
+}
+.loadHead-wordlogowrapper img {
+  width: 46px;
+  height: 15px;
+}
+.loadHead-wordlogowrapper span {
+  font-family: PingFangSC-Regular, arial, sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-top: 3px;
+  white-space: nowrap;
+}
+.loadHead-download {
+  font-family: PingFangSC-Regular, arial, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff7b91 0%, #ff98b7 100%);
+  text-align: center;
+  height: 30px;
+  width: 100px;
+  margin-right: 15px;
+  font-size: 14px;
+  border-radius: 25px;
+  line-height: 30px;
+}
+.loadHead-download span {
+  text-shadow: 0 2px 3px #ff6808;
+}
