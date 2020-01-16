@@ -24,6 +24,10 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
       },
       {
+        test: /\.less$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "less-loader"],
+      },
+      {
         test: /\.html$/,
         use: "html-loader"
       },
@@ -33,8 +37,7 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        use: [
-        ]
+        use: "raw-loader"
       }
     ]
   },
