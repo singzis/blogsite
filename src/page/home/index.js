@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import ReactMarkdown from 'react-markdown'
+import { Link } from 'react-router'
 import "./index.less";
-import md from "../../sources/1.md";
 
 const Home = () => {
   const [data, setDate] = useState("home");
 
   return (
-    <div className="div">
-
+    <div className="home">
+      <h1>name</h1>
+      <Link to="/prototype">pro</Link>
     </div>
   );
 };
