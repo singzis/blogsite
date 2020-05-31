@@ -1,3 +1,3 @@
-# blog 主页源码
+# blog
 
 react hooks + next.js
