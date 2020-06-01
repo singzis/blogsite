@@ -1,6 +1,30 @@
+/*
+红: #ee1a1a
+白色: #f7f7f7
+黑色: #0a0a0a
+*/
+
+html {
+    height: 100%;
+    background-color: #f7f7f7;
+}
+
 body {
-    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    padding: 20px 20px 30px;
-    max-width: 680px;
-    margin: 0 auto;
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', 'Microsoft YaHei', '宋体', sans-serif;
+    min-height: 100%;
+    position: relative;
+    background-color: #f7f7f7;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
 }
