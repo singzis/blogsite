@@ -6,14 +6,15 @@
 
 html {
     height: 100%;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
 }
 
 body {
     font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', 'Microsoft YaHei', '宋体', sans-serif;
     min-height: 100%;
     position: relative;
-    background-color: #f7f7f7;
+    color: rgba(0, 0, 0, 0.85);
+    /* background-color: #f7f7f7; */
 }
 
 img {

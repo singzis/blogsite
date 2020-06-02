@@ -27,7 +27,9 @@ export default function Footer() {
           font-size: 14px;
         }
         .text {
-          margin-bottom: 10px;
+           {
+            /* margin-bottom: 10px; */
+          }
         }
         .blog-name {
           text-decoration: underline;
