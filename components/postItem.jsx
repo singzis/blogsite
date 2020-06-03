@@ -21,7 +21,7 @@ export default function PostItem() {
       <div className="info">
         <span className="date">2020-06-01</span>
         <a className="read">
-          read <SendOutlined />
+          Read <SendOutlined />
         </a>
       </div>
       <style jsx>{`
