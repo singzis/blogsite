@@ -3,7 +3,7 @@ export default function Post(props) {
 }
 
 export async function getStaticProps() {
-  retunr {
-    props: { }
-  }
+  return {
+    props: {},
+  };
 }
