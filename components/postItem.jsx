@@ -1,5 +1,4 @@
 import { SendOutlined } from "@ant-design/icons";
-import { Divider } from "antd";
 import Tag from "./tag";
 
 export default function PostItem() {
