@@ -23,6 +23,7 @@ export default function Layout(props) {
       <Footer />
       <style jsx>{`
         .layout {
+          flex-grow: 1;
           padding-top: 100px;
           padding-bottom: 108px;
           position: relative;
