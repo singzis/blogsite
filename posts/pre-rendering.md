@@ -1,5 +1,6 @@
 ---
 title: "Two Forms of Pre-rendering"
+text: "Two Forms of Pre-rendering,Two Forms of Pre-rendering,Two Forms of Pre-rendering,Two Forms of Pre-rendering,Two Forms of Pre-rendering,"
 date: "2020-01-01"
 ---
 

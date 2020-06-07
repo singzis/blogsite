@@ -1,5 +1,6 @@
 ---
 title: "When to Use Static Generation v.s. Server-side Rendering"
+text: "Two Forms of Pre-rendering,Two Forms of Pre-rendering,Two Forms of Pre-rendering,Two Forms of Pre-rendering,Two Forms of Pre-rendering,"
 date: "2020-01-02"
 ---
 
