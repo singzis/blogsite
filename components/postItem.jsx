@@ -1,16 +1,13 @@
 import { SendOutlined } from "@ant-design/icons";
 import Tag from "./tag";
 
-export default function PostItem() {
+export default function PostItem({ id, date, title, text }) {
   return (
     <div className="item">
       <div className="title">
-        <a>这是文章标题</a>
+        <a>{title}</a>
       </div>
-      <div className="text">
-        这是文章大概，这是文章大概，这是文章大概，这是文章大概，这是文章大概，
-        这是文章大概，这是文章大概，这是文章大概，这是文章大概，这是文章大概，这是文章大概，这是文章大概，这是文章大概，这是文章大概，这是文章大概，
-      </div>
+      <div className="text">{text}</div>
       <div className="tags">
         <Tag text="javascript" />
         <Tag text="css" />
@@ -18,7 +15,7 @@ export default function PostItem() {
         <Tag text="webpack" />
       </div>
       <div className="info">
-        <span className="date">2020-06-01</span>
+        <span className="date">{date}</span>
         <a className="read">
           Read <SendOutlined />
         </a>
@@ -34,15 +31,15 @@ export default function PostItem() {
           font-size: 28px;
         }
         .title::after {
-          width: 100%;
+          flex-grow: 1;
           border-top: 1px solid #f0f0f0;
           transform: translateY(50%);
           content: "";
         }
-        a {
+        .title a {
           display: inline-block;
           white-space: nowrap;
-          padding-right: 1em;
+          padding-right: 10px;
         }
         .title a:hover {
           color: #ee1a1a;
