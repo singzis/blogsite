@@ -10,7 +10,7 @@ export default function Header(props) {
         <Col span={18}>
           <div className="header-box">
             <div className="left">
-              <Avatar />
+              {/* <Avatar /> */}
               <div className="blog-name">
                 <BlogName />
               </div>
@@ -33,9 +33,11 @@ export default function Header(props) {
           z-index: 1;
         }
         .header-box {
-          padding: 17px 0 18px;
+          padding: 27px 0 28px;
           display: flex;
-          justify-content: space-between;
+           {
+            /* justify-content: space-between; */
+          }
           align-items: center;
         }
         .left {
