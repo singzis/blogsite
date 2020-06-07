@@ -29,7 +29,7 @@ export default function Header(props) {
           left: 0;
           width: 100%;
           border-bottom: 1px solid #d6d6d6;
-          background-color: #fff;
+          background-color: #1c1e26;
           z-index: 1;
         }
         .header-box {

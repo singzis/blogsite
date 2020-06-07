@@ -17,7 +17,7 @@ export default function Nav() {
           display: flex;
         }
         .nav-link {
-          color: #0a0a0a;
+          color: #f7f7f7;
           font-size: 28px;
         }
         .nav-link:not(:last-child) {

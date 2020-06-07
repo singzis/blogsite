@@ -1,24 +1,32 @@
 import { SendOutlined } from "@ant-design/icons";
+import Link from "next/link";
 import Tag from "./tag";
+import Date from "../components/date";
 
-export default function PostItem({ id, date, title, text }) {
+export default function PostItem({ id, date, title, text, category }) {
+  const cates = category.split(",");
   return (
     <div className="item">
       <div className="title">
-        <a>{title}</a>
+        <Link href="/posts/[id]" as={`/posts/${id}`}>
+          <a>{title}</a>
+        </Link>
       </div>
       <div className="text">{text}</div>
       <div className="tags">
-        <Tag text="javascript" />
-        <Tag text="css" />
-        <Tag text="react" />
-        <Tag text="webpack" />
+        {cates.map((cur) => (
+          <Tag text={cur} key={cur} />
+        ))}
       </div>
       <div className="info">
-        <span className="date">{date}</span>
-        <a className="read">
-          Read <SendOutlined />
-        </a>
+        <span className="date">
+          <Date dateString={date} />
+        </span>
+        <Link href="/posts/[id]" as={`/posts/${id}`}>
+          <a className="read">
+            Read <SendOutlined />
+          </a>
+        </Link>
       </div>
       <style jsx>{`
         .item {

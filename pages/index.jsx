@@ -3,19 +3,17 @@ import Layout from "../components/layout";
 import PostItem from "../components/postItem";
 import { getSortedPostsData } from "../lib/posts";
 
-export default function Index(props) {
-  const { allPostsData } = props;
-  console.log(allPostsData);
+export default function Index({ allPostsData }) {
   return (
     <Layout>
       <Heade>
         <title>singz72's blog</title>
       </Heade>
-      <div>
+      <section>
         {allPostsData.map((cur) => (
           <PostItem key={cur.id} {...cur} />
         ))}
-      </div>
+      </section>
     </Layout>
   );
 }

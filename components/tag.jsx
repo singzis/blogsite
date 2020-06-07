@@ -5,6 +5,7 @@ const INIT_COLOR = {
   react: "#2db7f5",
   css: "#f50",
   webpack: "#2478ba",
+  server: "#fed66e",
 };
 
 export default function Comp({ text }) {

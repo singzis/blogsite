@@ -19,7 +19,7 @@ export default function Footer() {
           bottom: 0;
           width: 100%;
           padding: 20px 0;
-          background-color: #0a0a0a;
+          background-color: #1c1e26;
           display: flex;
           flex-direction: column;
           align-items: center;

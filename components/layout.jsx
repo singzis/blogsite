@@ -15,11 +15,13 @@ export default function Layout(props) {
         />
       </Head>
       <Header />
-      <Row justify="center">
-        <Col span={18}>
-          <div className="layout-content">{props.children}</div>
-        </Col>
-      </Row>
+      <div className="content">
+        <Row justify="center">
+          <Col span={18}>
+            <div className="content-col">{props.children}</div>
+          </Col>
+        </Row>
+      </div>
       <Footer />
       <style jsx>{`
         .layout {
@@ -27,8 +29,13 @@ export default function Layout(props) {
           padding-top: 100px;
           padding-bottom: 108px;
           position: relative;
+          display: flex;
         }
-        .layout-content {
+        .content {
+          background: #fff;
+          flex-basis: 100%;
+        }
+        .content-col {
           padding: 20px 10px;
         }
       `}</style>
