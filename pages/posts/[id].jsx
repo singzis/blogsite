@@ -5,11 +5,18 @@ import Date from "../../components/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
+import css from "highlight.js/lib/languages/css";
+import shell from "highlight.js/lib/languages/shell";
 
 export default function Post({ postData: { title, date, contentHtml } }) {
   useEffect(() => {
-    //   hljs.registerLanguage("javascript", javascript);
-    hljs.initHighlightingOnLoad();
+    hljs.registerLanguage("javascript", javascript);
+    hljs.registerLanguage("shell", shell);
+    hljs.registerLanguage("css", css);
+    let blocks = document.querySelectorAll("pre code");
+    blocks.forEach((node) => {
+      hljs.highlightBlock(node);
+    });
   }, [contentHtml]);
   return (
     <Layout>
