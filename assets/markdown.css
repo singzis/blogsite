@@ -3,6 +3,7 @@ h2,
 h3,
 h4 {
     color: #305973;
+    line-height: 2em;
 }
 
 h1 {
@@ -35,12 +36,33 @@ h5 {
     margin: 1em 0;
 }
 
+ul {
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+ul ul {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+li {
+    font-size: 16px;
+    list-style: circle;
+    margin-bottom: 5px;
+}
+
 blockquote {
     border-left: 5px solid #ffb400;
-    padding: 1px 20px;
+    border-radius: 4px;
+    padding: 5px 20px;
     background-color: #faebd8;
     margin-left: 0px;
     margin-right: 0;
+}
+
+blockquote p {
+    margin: 0;
 }
 
 strong code {
@@ -50,17 +72,21 @@ strong code {
 }
 
 p {
-    /* max-width: 700px; */
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 1.5em;
     text-align: justify;
     word-spacing: 5px;
+    margin: 20px 0;
 }
 
 li code,
 p code {
     background-color: #faebd8;
     padding: 0 2px;
+}
+
+pre {
+    border-radius: 4px;
 }
 
 pre code {
@@ -81,5 +107,6 @@ code span {
 
 hr {
     border: #ffb400 1.5px solid;
-    margin: 45px 0 30px;
+    border-radius: 100px;
+    margin: 25px 0 25px;
 }

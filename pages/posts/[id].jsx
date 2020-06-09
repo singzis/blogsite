@@ -25,16 +25,20 @@ export default function Post({ postData: { title, date, contentHtml } }) {
       </Head>
       <article>
         <div className="title">{title}</div>
-        <Date dateString={date} />
+        <div className="date">
+          <Date dateString={date} />
+        </div>
         <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
       </article>
       <style jsx>{`
         .title {
-          text-align: center;
           font-size: 42px;
           font-weight: 500;
-          line-height: 1.5;
-          padding: 10px 0;
+          line-height: 1;
+          padding: 10px 0 5px;
+        }
+        .date {
+          margin-bottom: 20px;
         }
       `}</style>
     </Layout>
