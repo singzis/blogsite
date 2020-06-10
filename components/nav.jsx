@@ -4,45 +4,34 @@ export default function Nav() {
   const { pathname } = useRouter();
   return (
     <div className="nav">
-      <span className="nav-note">// </span>
       <Link href="/">
         <a className={`nav-link ${pathname === "/" ? "selected" : ""}`}>主页</a>
       </Link>
       <Link href="/about">
         <a className={`nav-link ${pathname === "/about" ? "selected" : ""}`}>
-          关于
+          分类搜索
         </a>
       </Link>
       <Link href="/about">
         <a className={`nav-link ${pathname === "/about" ? "selected" : ""}`}>
-          分类
-        </a>
-      </Link>
-      <Link href="/about">
-        <a className={`nav-link ${pathname === "/about" ? "selected" : ""}`}>
-          log
+          更新日志
         </a>
       </Link>
       <style jsx>{`
         .nav {
           display: flex;
-          font-size: 28px;
-          font-style: italic;
-          color: #5d5d5d;
-        }
-        .nav-note {
-          margin-left: 10px;
-          margin-right: 10px;
-          font-size: 28px;
+          font-size: 20px;
+          line-height: 30px;
+          color: #f6f6f6;
         }
         .nav-link:not(:last-child) {
           margin-right: 30px;
         }
         .nav-link:hover {
-          color: #ee1a1a;
+          color: #ffb400;
         }
         .selected {
-          color: #ee1a1a;
+          color: #ffb400;
         }
       `}</style>
     </div>

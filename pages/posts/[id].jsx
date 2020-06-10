@@ -4,6 +4,8 @@ import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";
 import shell from "highlight.js/lib/languages/shell";
+import nginx from "highlight.js/lib/languages/nginx";
+import json from "highlight.js/lib/languages/json";
 import Layout from "../../components/layout";
 import Date from "../../components/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
@@ -13,6 +15,8 @@ export default function Post({ postData: { title, date, contentHtml } }) {
     hljs.registerLanguage("javascript", javascript);
     hljs.registerLanguage("shell", shell);
     hljs.registerLanguage("css", css);
+    hljs.registerLanguage("nginx", nginx);
+    hljs.registerLanguage("json", json);
     let blocks = document.querySelectorAll("pre code");
     blocks.forEach((node) => {
       hljs.highlightBlock(node);

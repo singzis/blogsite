@@ -11,6 +11,8 @@ nextjs 是一个基于 react 服务端渲染的应用框架。
 
 这里打算用 nextjs 配合 react hook 写一个博客，但是发现部署并没有 nextjs 官方文档写的那么简单（是我太菜了），所以踩坑需要记录一下。
 
+---
+
 ## 配置
 
 - nextjs 官方 demo
@@ -21,6 +23,8 @@ nextjs 是一个基于 react 服务端渲染的应用框架。
   - node v14.2.0
   - nginx v1.16.1
   - pm2 v4.4.0
+
+---
 
 ## 前端项目构建
 
@@ -74,6 +78,8 @@ export default function Layout(props) {
 其他的页面，可以随便写点什么。
 
 本地通过`next dev`可以启动项目，页面正常显示就可以开始部署了。
+
+---
 
 ## 部署
 
@@ -142,7 +148,7 @@ vim ngins.conf
 
 按`i`修改文件：
 
-```conf
+```Nginx
 # nginx.conf
 server {
     ...
@@ -262,6 +268,8 @@ pm2 start server.js
 ```
 
 通过`pm2 logs`或者`pm2 list`可以查看项目启动情况，或者直接访问 ip 来查看。
+
+---
 
 ## 结语
 

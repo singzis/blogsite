@@ -1,5 +1,5 @@
 /*
-红: #ee1a1a
+红: #ffb400;
 白色: #f7f7f7
 黑色: #0a0a0a
 */
@@ -35,6 +35,7 @@ div {
 a {
     cursor: pointer;
 }
+
 a:hover,
 a:focus,
 a:active {

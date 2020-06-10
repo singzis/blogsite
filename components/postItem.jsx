@@ -1,4 +1,4 @@
-import { SendOutlined } from "@ant-design/icons";
+import { ReadOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import Tag from "./tag";
 import Date from "../components/date";
@@ -24,7 +24,7 @@ export default function PostItem({ id, date, title, text, category }) {
         </span>
         <Link href="/posts/[id]" as={`/posts/${id}`}>
           <a className="read">
-            Read <SendOutlined />
+            Read <ReadOutlined />
           </a>
         </Link>
       </div>
@@ -40,7 +40,7 @@ export default function PostItem({ id, date, title, text, category }) {
         }
         .title::after {
           flex-grow: 1;
-          border-top: 1px solid #f0f0f0;
+          border-top: 1px solid #ffb400;
           transform: translateY(50%);
           content: "";
         }
@@ -50,7 +50,7 @@ export default function PostItem({ id, date, title, text, category }) {
           padding-right: 10px;
         }
         .title a:hover {
-          color: #ee1a1a;
+          color: #ffb400;
         }
         .text {
           margin-bottom: 10px;
@@ -68,7 +68,7 @@ export default function PostItem({ id, date, title, text, category }) {
           color: rgba(0, 0, 0, 0.45);
         }
         .read:hover {
-          color: #ee1a1a;
+          color: #ffb400;
         }
       `}</style>
     </div>

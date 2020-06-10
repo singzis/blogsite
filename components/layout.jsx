@@ -1,9 +1,8 @@
-import { BackTop } from "antd";
-import { CaretUpFilled } from "@ant-design/icons";
 import Head from "next/head";
 import Header from "./header";
 import Footer from "./footer";
 import Personal from "./personal";
+import BackToTop from "./backToTop";
 
 export default function Layout(props) {
   return (
@@ -26,15 +25,11 @@ export default function Layout(props) {
         </div>
       </div>
       <Footer />
-      <BackTop>
-        <div className="back-top">
-          <CaretUpFilled style={{ color: "#f6f6f6", fontSize: "28px" }} />
-        </div>
-      </BackTop>
+      <BackToTop />
       <style jsx>{`
         .layout {
           flex-grow: 1;
-          padding-top: 100px;
+          padding-top: 80px;
           padding-bottom: 108px;
           position: relative;
           display: flex;
@@ -51,24 +46,15 @@ export default function Layout(props) {
         }
         .main-personal {
           flex: 0 0 300px;
-          height: calc(100vh - 250px);
+          height: calc(100vh - 230px);
           position: -webkit-sticky;
           position: sticky;
-          top: 120px;
+          top: 100px;
           overflow: scroll;
         }
         .main-content {
           width: calc(100% - 300px);
           padding: 0 20px 20px 40px;
-        }
-        .back-top {
-          height: 40px;
-          width: 40px;
-          border-radius: 4px;
-          background-color: #1c1e26;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
       `}</style>
     </div>

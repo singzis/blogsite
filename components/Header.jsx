@@ -1,5 +1,4 @@
 import { Row, Col } from "antd";
-import Avatar from "./avatar";
 import BlogName from "./blogname";
 import Nav from "./nav";
 
@@ -10,7 +9,6 @@ export default function Header(props) {
         <Col span={18}>
           <div className="header-box">
             <div className="left">
-              {/* <Avatar /> */}
               <div className="blog-name">
                 <BlogName />
               </div>
@@ -21,7 +19,6 @@ export default function Header(props) {
           </div>
         </Col>
       </Row>
-      {/*  */}
       <style jsx>{`
         .header {
           position: fixed;
@@ -32,11 +29,9 @@ export default function Header(props) {
           z-index: 1;
         }
         .header-box {
-          padding: 28px 0;
+          padding: 25px 0;
           display: flex;
-           {
-            /* justify-content: space-between; */
-          }
+          justify-content: space-between;
           align-items: center;
         }
         .left {
