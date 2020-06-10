@@ -2,7 +2,7 @@ h1,
 h2,
 h3,
 h4 {
-    color: #305973;
+    color: #1c1e26;
     line-height: 2em;
 }
 
@@ -72,11 +72,12 @@ strong code {
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.5em;
+    font-size: 16px;
+    line-height: 2em;
     text-align: justify;
-    word-spacing: 5px;
+    word-spacing: 6px;
     margin: 20px 0;
+    color: #262626;
 }
 
 li code,

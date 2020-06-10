@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { Row, Col } from "antd";
 import Header from "./header";
 import Footer from "./footer";
+import Personal from "./personal";
 
 export default function Layout(props) {
   return (
@@ -15,12 +15,13 @@ export default function Layout(props) {
         />
       </Head>
       <Header />
-      <div className="content">
-        <Row justify="center">
-          <Col span={18}>
-            <div className="content-col">{props.children}</div>
-          </Col>
-        </Row>
+      <div className="main">
+        <div className="main-box">
+          <div className="main-personal">
+            <Personal />
+          </div>
+          <div className="main-content">{props.children}</div>
+        </div>
       </div>
       <Footer />
       <style jsx>{`
@@ -30,13 +31,27 @@ export default function Layout(props) {
           padding-bottom: 108px;
           position: relative;
           display: flex;
+          justify-content: center;
         }
-        .content {
+        .main {
           background: #fff;
-          flex-basis: 100%;
         }
-        .content-col {
-          padding: 20px 10px;
+        .main-box {
+          width: 75%;
+          margin: 20px auto 0;
+          display: flex;
+          position: relative;
+        }
+        .main-personal {
+          flex: 0 0 300px;
+          height: calc(100vh - 226px);
+          position: -webkit-sticky;
+          position: sticky;
+          top: 120px;
+        }
+        .main-content {
+          width: calc(100% - 300px);
+          padding: 0 20px 20px;
         }
       `}</style>
     </div>

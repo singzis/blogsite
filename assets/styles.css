@@ -35,3 +35,8 @@ div {
 a {
     cursor: pointer;
 }
+a:hover,
+a:focus,
+a:active {
+    color: #ffb400;
+}

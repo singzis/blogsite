@@ -5,8 +5,12 @@ export default function Avatar() {
       <style jsx>
         {`
           .avatar {
-            width: 64px;
-            height: 64px;
+            width: 100%;
+            height: 100%;
+            min-width: 32px;
+            min-height: 32px;
+            max-width: 128px;
+            max-height: 128px;
             border-radius: 100%;
             overflow: hidden;
           }

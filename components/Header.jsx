@@ -28,12 +28,11 @@ export default function Header(props) {
           top: 0;
           left: 0;
           width: 100%;
-          border-bottom: 1px solid #d6d6d6;
           background-color: #1c1e26;
           z-index: 1;
         }
         .header-box {
-          padding: 27px 0 28px;
+          padding: 28px 0;
           display: flex;
            {
             /* justify-content: space-between; */

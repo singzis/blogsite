@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import Head from "next/head";
-import Layout from "../../components/layout";
-import Date from "../../components/date";
-import { getAllPostIds, getPostData } from "../../lib/posts";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";
 import shell from "highlight.js/lib/languages/shell";
+import Layout from "../../components/layout";
+import Date from "../../components/date";
+import { getAllPostIds, getPostData } from "../../lib/posts";
 
 export default function Post({ postData: { title, date, contentHtml } }) {
   useEffect(() => {
@@ -26,19 +26,26 @@ export default function Post({ postData: { title, date, contentHtml } }) {
       <article>
         <div className="title">{title}</div>
         <div className="date">
+          发布于
           <Date dateString={date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        ></div>
       </article>
       <style jsx>{`
         .title {
           font-size: 42px;
           font-weight: 500;
           line-height: 1;
-          padding: 10px 0 5px;
+          padding: 10px 0 10px;
         }
         .date {
-          margin-bottom: 20px;
+          color: #666;
+        }
+        .content {
+          margin-top: 40px;
         }
       `}</style>
     </Layout>
