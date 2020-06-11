@@ -3,11 +3,13 @@ import { Input } from "antd";
 import Layout from "../components/layout";
 import Tag from "../components/tag";
 import NoData from "../components/noData";
+import SearchItem from "../components/searchItem";
 import { INIT_LANGUAGE } from "../lib/init";
+import { getSortedPostsData } from "../lib/posts";
 
 const { Search } = Input;
 
-export default function SearchComp() {
+export default function SearchComp({ allPostsData }) {
   const search = (val) => {
     console.log(val);
   };
@@ -33,8 +35,12 @@ export default function SearchComp() {
           </div>
         </div>
         <div className="search-list">
-          {false ? (
-            <></>
+          {true ? (
+            <div className="list">
+              {allPostsData.map((cur) => (
+                <SearchItem key={cur.id} {...cur} />
+              ))}
+            </div>
           ) : (
             <div className="no-data">
               <NoData />
@@ -57,6 +63,9 @@ export default function SearchComp() {
           .search-list {
             flex-grow: 1;
           }
+          .list {
+            padding-top: 20px;
+          }
           .no-data {
             padding-top: 60px;
           }
@@ -78,4 +87,11 @@ export default function SearchComp() {
       </div>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: { allPostsData },
+  };
 }

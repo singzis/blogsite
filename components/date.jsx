@@ -5,9 +5,7 @@ const locale = {
   locale: zhCN,
 };
 
-export default function Date({ dateString }) {
+export default function Date({ dateString, type = "yyyy年MM月dd日" }) {
   const date = parseISO(dateString);
-  return (
-    <time dateTime={dateString}>{format(date, "yyyy年MM月dd日", locale)}</time>
-  );
+  return <time dateTime={dateString}>{format(date, type, locale)}</time>;
 }
