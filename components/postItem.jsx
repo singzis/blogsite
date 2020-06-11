@@ -31,7 +31,7 @@ export default function PostItem({ id, date, title, text, category }) {
       <style jsx>{`
         .item {
           margin-bottom: 40px;
-          padding: 0 20px;
+          padding-left: 20px;
         }
         .title {
           display: flex;
@@ -40,13 +40,12 @@ export default function PostItem({ id, date, title, text, category }) {
         }
         .title::after {
           flex-grow: 1;
-          border-top: 1px solid #ffb400;
+          border-top: 2px solid #ffb400;
           transform: translateY(50%);
           content: "";
         }
         .title a {
           display: inline-block;
-          white-space: nowrap;
           padding-right: 10px;
         }
         .title a:hover {

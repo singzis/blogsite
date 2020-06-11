@@ -5,20 +5,16 @@ import Nav from "./nav";
 export default function Header(props) {
   return (
     <div className="header">
-      <Row justify="center" align="middle">
-        <Col span={18}>
-          <div className="header-box">
-            <div className="left">
-              <div className="blog-name">
-                <BlogName />
-              </div>
-            </div>
-            <div className="right">
-              <Nav />
-            </div>
+      <div className="header-box">
+        <div className="left">
+          <div className="blog-name">
+            <BlogName />
           </div>
-        </Col>
-      </Row>
+        </div>
+        <div className="right">
+          <Nav />
+        </div>
+      </div>
       <style jsx>{`
         .header {
           position: fixed;
@@ -29,6 +25,9 @@ export default function Header(props) {
           z-index: 1;
         }
         .header-box {
+          width: 75%;
+          max-width: 1000px;
+          margin: 0 auto;
           padding: 25px 0;
           display: flex;
           justify-content: space-between;

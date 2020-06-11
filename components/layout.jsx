@@ -16,6 +16,7 @@ export default function Layout(props) {
         />
       </Head>
       <Header />
+      <div className="wrap"></div>
       <div className="main">
         <div className="main-box">
           <aside className="main-personal">
@@ -35,11 +36,22 @@ export default function Layout(props) {
           display: flex;
           justify-content: center;
         }
+        .wrap {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #fff;
+          background-image: url("/images/texture.png");
+          background-size: 100% 100%;
+        }
         .main {
-          background: #f6f6f6;
+          width: 100%;
         }
         .main-box {
           width: 75%;
+          max-width: 1000px;
           margin: 20px auto;
           display: flex;
           position: relative;
@@ -54,7 +66,7 @@ export default function Layout(props) {
         }
         .main-content {
           width: calc(100% - 300px);
-          padding: 0 20px 20px 40px;
+          padding: 0 0 20px 40px;
         }
       `}</style>
     </div>

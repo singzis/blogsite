@@ -39,6 +39,8 @@ date: "2020-05-07"
   - 每个保留的空格字符后都存在换行机会，包括空格字符之间。
   - 这样保留的空间占用空间而不会挂起，从而影响盒子的固有尺寸（最小内容大小和最大内容大小）。
 
+---
+
 ## word-break
 
 > 指定如何在单词/连续字符内断行
@@ -60,6 +62,8 @@ date: "2020-05-07"
 - break-word
 
   他的效果是`word-break: normal`和`overflow-wrap: anywhere`的合，不论`overflow-wrap`的值是多少。
+
+---
 
 ## word-wrap(overflow-wrap)
 

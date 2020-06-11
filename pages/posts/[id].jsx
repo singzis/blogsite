@@ -8,9 +8,12 @@ import nginx from "highlight.js/lib/languages/nginx";
 import json from "highlight.js/lib/languages/json";
 import Layout from "../../components/layout";
 import Date from "../../components/date";
+import Tag from "../../components/tag";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
-export default function Post({ postData: { title, date, contentHtml } }) {
+export default function Post({
+  postData: { title, date, contentHtml, category },
+}) {
   useEffect(() => {
     hljs.registerLanguage("javascript", javascript);
     hljs.registerLanguage("shell", shell);
@@ -33,6 +36,11 @@ export default function Post({ postData: { title, date, contentHtml } }) {
           发布于
           <Date dateString={date} />
         </div>
+        <div className="category">
+          {category.split(",").map((tag) => (
+            <Tag text={tag} key={tag} />
+          ))}
+        </div>
         <div
           className="content"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
@@ -42,11 +50,12 @@ export default function Post({ postData: { title, date, contentHtml } }) {
         .title {
           font-size: 42px;
           font-weight: 500;
-          line-height: 1;
+          line-height: 1.2;
           padding: 10px 0 10px;
         }
         .date {
           color: #666;
+          margin-bottom: 10px;
         }
         .content {
           margin-top: 40px;

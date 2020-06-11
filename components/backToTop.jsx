@@ -13,7 +13,7 @@ export default function BackToTop() {
         .back-top {
           height: 40px;
           width: 40px;
-          border-radius: 4px;
+          border-radius: 2px;
           background-color: #1c1e26;
           display: flex;
           align-items: center;

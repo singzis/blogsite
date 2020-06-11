@@ -1,12 +1,5 @@
 import { Tag } from "antd";
-
-const INIT_COLOR = {
-  javascript: "#108ee9",
-  react: "#2db7f5",
-  css: "#f50",
-  webpack: "#2478ba",
-  server: "#fed66e",
-};
+import { INIT_COLOR } from "../lib/init";
 
 export default function Comp({ text }) {
   return <Tag color={INIT_COLOR[text]}>{text}</Tag>;

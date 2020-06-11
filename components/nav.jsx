@@ -7,14 +7,9 @@ export default function Nav() {
       <Link href="/">
         <a className={`nav-link ${pathname === "/" ? "selected" : ""}`}>主页</a>
       </Link>
-      <Link href="/about">
-        <a className={`nav-link ${pathname === "/about" ? "selected" : ""}`}>
-          分类搜索
-        </a>
-      </Link>
-      <Link href="/about">
-        <a className={`nav-link ${pathname === "/about" ? "selected" : ""}`}>
-          更新日志
+      <Link href="/search">
+        <a className={`nav-link ${pathname === "/search" ? "selected" : ""}`}>
+          搜索
         </a>
       </Link>
       <style jsx>{`

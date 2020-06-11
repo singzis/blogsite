@@ -87,7 +87,7 @@ li li {
 
 blockquote {
     border-left: 5px solid #ffb400;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 5px 20px;
     background-color: #faebd8;
     margin-left: 0px;
@@ -124,7 +124,7 @@ p code {
 }
 
 pre {
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 pre code {
