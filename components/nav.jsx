@@ -23,10 +23,10 @@ export default function Nav() {
           margin-right: 30px;
         }
         .nav-link:hover {
-          color: #ffb400;
+          color: #ffcc00;
         }
         .selected {
-          color: #ffb400;
+          color: #ffcc00;
         }
       `}</style>
     </div>

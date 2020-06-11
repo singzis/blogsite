@@ -22,7 +22,7 @@ export default function SearchComp({ allPostsData }) {
         <div className="search-box">
           <Search
             placeholder="输入关键词进行搜索..."
-            enterButton="搜索"
+            enterButton
             size="large"
             onSearch={search}
             allowClear
@@ -72,15 +72,15 @@ export default function SearchComp({ allPostsData }) {
         `}</style>
         <style global jsx>{`
           .search-input .ant-btn-primary {
-            background: #ffb400;
-            border-color: #ffb400;
+            background: #ffcc00;
+            border-color: #ffcc00;
           }
           .search-input .ant-input-affix-wrapper:hover,
           .search-input .ant-input-affix-wrapper:focus {
-            border-color: #ffb400;
+            border-color: #ffcc00;
           }
           .search-input .ant-input-affix-wrapper-focused {
-            border-color: #ffb400;
+            border-color: #ffcc00;
             box-shadow: 0 0 0 2px rgba(255, 180, 0, 0.2);
           }
         `}</style>

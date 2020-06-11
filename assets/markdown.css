@@ -17,7 +17,7 @@ h5:hover::before {
     position: absolute;
     left: 0;
     transform: translateX(-110%);
-    color: #ffb400;
+    color: #ffcc00;
     opacity: 0.85;
 }
 
@@ -86,7 +86,7 @@ li li {
 }
 
 blockquote {
-    border-left: 5px solid #ffb400;
+    border-left: 5px solid #ffcc00;
     border-radius: 2px;
     padding: 5px 20px;
     background-color: #faebd8;
@@ -131,7 +131,7 @@ pre code {
     font-size: 16px;
     white-space: pre;
     -webkit-column-break-inside: avoid-column;
-    border-left: 5px solid #ffb400;
+    border-left: 5px solid #ffcc00;
 }
 
 blockquote p,
@@ -144,7 +144,7 @@ code span {
 }
 
 hr {
-    border: #ffb400 1.5px solid;
+    border: #ffcc00 1.5px solid;
     border-radius: 100px;
     margin: 25px 0 25px;
 }

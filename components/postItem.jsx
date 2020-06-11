@@ -40,7 +40,7 @@ export default function PostItem({ id, date, title, text, category }) {
         }
         .title::after {
           flex-grow: 1;
-          border-top: 2px solid #ffb400;
+          border-top: 2px solid #ffcc00;
           transform: translateY(50%);
           content: "";
         }
@@ -49,7 +49,7 @@ export default function PostItem({ id, date, title, text, category }) {
           padding-right: 10px;
         }
         .title a:hover {
-          color: #ffb400;
+          color: #ffcc00;
         }
         .text {
           margin-bottom: 10px;
@@ -67,7 +67,7 @@ export default function PostItem({ id, date, title, text, category }) {
           color: rgba(0, 0, 0, 0.45);
         }
         .read:hover {
-          color: #ffb400;
+          color: #ffcc00;
         }
       `}</style>
     </div>

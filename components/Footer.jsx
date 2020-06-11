@@ -35,10 +35,10 @@ export default function Footer() {
           text-decoration: underline;
         }
         .blog-name:hover {
-          color: #ffb400;
+          color: #ffcc00;
         }
         .beian:hover {
-          color: #ffb400;
+          color: #ffcc00;
           text-decoration: underline;
         }
       `}</style>

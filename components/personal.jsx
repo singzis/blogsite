@@ -60,7 +60,7 @@ export default function Personal() {
         }
         .avatar {
           border-radius: 100px;
-          border: 3px solid #ffb400;
+          border: 3px solid #ffcc00;
           margin-bottom: 30px;
         }
         .name {

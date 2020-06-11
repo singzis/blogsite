@@ -31,7 +31,7 @@ export default function Layout(props) {
         .layout {
           flex-grow: 1;
           padding-top: 80px;
-          padding-bottom: 108px;
+          padding-bottom: 106px;
           position: relative;
           display: flex;
           justify-content: center;
