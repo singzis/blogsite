@@ -1,9 +1,10 @@
 import Head from "next/head";
-import { Input, Pagination } from "antd";
+import { Input } from "antd";
 import Layout from "../components/layout";
 import Tag from "../components/tag";
 import NoData from "../components/noData";
 import SearchItem from "../components/searchItem";
+import Pagination from "../components/pagination";
 import { INIT_LANGUAGE } from "../lib/init";
 import { getSortedPostsData } from "../lib/posts";
 
