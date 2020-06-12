@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Input } from "antd";
+import { Input, Pagination } from "antd";
 import Layout from "../components/layout";
 import Tag from "../components/tag";
 import NoData from "../components/noData";
@@ -40,6 +40,15 @@ export default function SearchComp({ allPostsData }) {
               {allPostsData.map((cur) => (
                 <SearchItem key={cur.id} {...cur} />
               ))}
+              <div className="pagination">
+                <Pagination
+                  size="small"
+                  total={500}
+                  hideOnSinglePage
+                  defaultPageSize={6}
+                  showSizeChanger={false}
+                />
+              </div>
             </div>
           ) : (
             <div className="no-data">
@@ -55,7 +64,7 @@ export default function SearchComp({ allPostsData }) {
             flex-direction: column;
           }
           .search-box {
-            padding: 40px 0;
+            padding: 40px 0 30px;
           }
           .search-tags {
             margin-top: 10px;
@@ -64,7 +73,12 @@ export default function SearchComp({ allPostsData }) {
             flex-grow: 1;
           }
           .list {
-            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          .pagination {
+            margin-top: 20px;
           }
           .no-data {
             padding-top: 60px;

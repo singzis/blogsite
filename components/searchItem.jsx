@@ -14,6 +14,7 @@ export default function SearchItem({ id, date, title }) {
       </div>
       <style jsx>{`
         .item {
+          width: 100%;
           display: flex;
           margin: 10px 0;
         }
