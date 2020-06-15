@@ -1,5 +1,7 @@
+import Raect, { useState } from "react";
 import Head from "next/head";
 import { Input } from "antd";
+import { cloneDeep, indexOf, debounce } from "lodash";
 import Layout from "../components/layout";
 import Tag from "../components/tag";
 import NoData from "../components/noData";
@@ -8,12 +10,64 @@ import Pagination from "../components/pagination";
 import { INIT_LANGUAGE } from "../lib/init";
 import { getSortedPostsData } from "../lib/posts";
 
-const { Search } = Input;
-
 export default function SearchComp({ allPostsData }) {
-  const search = (val) => {
-    console.log(val);
+  const [postData] = useState(() => {
+    return cloneDeep(allPostsData);
+  });
+
+  const [pages, setPages] = useState(() => {
+    return {
+      total: postData.length,
+      pageSize: 6,
+      pageNum: 1,
+    };
+  });
+
+  const [list, setList] = useState(postData);
+  const [currentList, setCurrentList] = useState(() => {
+    const { pageSize } = pages;
+    return list.slice(0, pageSize);
+  });
+
+  const pageChange = (page) => {
+    const { pageSize } = pages;
+    const currentList = list.slice(pageSize * (page - 1), pageSize * page);
+    setCurrentList(currentList);
+    setPages((prev) => ({
+      ...prev,
+      pageNum: page,
+    }));
   };
+
+  const handleList = (list = postData) => {
+    setList(list);
+    setCurrentList(() => list.slice(0, pages.pageSize));
+    setPages((prev) => ({
+      ...prev,
+      total: list.length,
+      pageNum: 1,
+    }));
+  };
+
+  const change = debounce((val) => {
+    if (val.trim()) {
+      const list = postData.filter((post) => {
+        const cates = post.category.split(",");
+        const i = indexOf(cates, val);
+        if (i > -1) {
+          return true;
+        }
+        return false;
+      });
+      // 还需要对标题名称进行检索，后期再加上内容，不过这个就有点大了
+      // 对文章的tag进行扩增
+      handleList(list);
+      return;
+    }
+    // 复原
+    handleList();
+  }, 1000);
+
   return (
     <Layout>
       <Head>
@@ -21,11 +75,10 @@ export default function SearchComp({ allPostsData }) {
       </Head>
       <div className="search">
         <div className="search-box">
-          <Search
+          <Input
             placeholder="输入关键词进行搜索..."
-            enterButton
             size="large"
-            onSearch={search}
+            onChange={(e) => change(e.target.value)}
             allowClear
             className="search-input"
           />
@@ -38,16 +91,18 @@ export default function SearchComp({ allPostsData }) {
         <div className="search-list">
           {true ? (
             <div className="list">
-              {allPostsData.map((cur) => (
+              {currentList.map((cur) => (
                 <SearchItem key={cur.id} {...cur} />
               ))}
               <div className="pagination">
                 <Pagination
                   size="small"
-                  total={500}
+                  total={pages.total}
                   hideOnSinglePage
-                  defaultPageSize={6}
+                  pageSize={pages.pageSize}
                   showSizeChanger={false}
+                  currrent={pages.pageNum}
+                  onChange={pageChange}
                 />
               </div>
             </div>
@@ -65,7 +120,7 @@ export default function SearchComp({ allPostsData }) {
             flex-direction: column;
           }
           .search-box {
-            padding: 40px 0 30px;
+            padding: 20px 0;
           }
           .search-tags {
             margin-top: 10px;
@@ -86,10 +141,6 @@ export default function SearchComp({ allPostsData }) {
           }
         `}</style>
         <style global jsx>{`
-          .search-input .ant-btn-primary {
-            background: #ffcc00;
-            border-color: #ffcc00;
-          }
           .search-input .ant-input-affix-wrapper:hover,
           .search-input .ant-input-affix-wrapper:focus {
             border-color: #ffcc00;
