@@ -30,13 +30,14 @@ export default function Index({ allPostsData }) {
         `}</style>
         <style global jsx>{`
           .more .ant-btn-primary {
-            background-color: #ffcc00;
-            border-color: #ffcc00;
+            background-color: #1c1e26;
+            border-color: #1c1e26;
           }
           .more .ant-btn-primary:hover,
           .more .ant-btn-primary:focus {
-            background: #ffd64b;
-            border-color: #ffd64b;
+            background: #1c1e26;
+            border-color: #1c1e26;
+            color: #ffcc00;
           }
         `}</style>
       </section>

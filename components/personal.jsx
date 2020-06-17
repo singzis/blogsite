@@ -40,7 +40,7 @@ export default function Personal() {
         <div className="info-col">
           <WechatOutlined />
           <Popover content={wechatQr} placement="bottom">
-            <span className="info-col-text">zx19940525</span>
+            <span className="info-col-text">singzois</span>
           </Popover>
         </div>
         <div className="info-col">
