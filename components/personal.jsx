@@ -21,7 +21,7 @@ export default function Personal() {
         <Avatar />
       </div>
       <div className="info">
-        <div className="name">Singz72</div>
+        <div className="name">SINGZ72</div>
         <div className="desc">
           🥳 🥳 🥳
           不断完善自身，以寻求正确之路。希望有朝一日能够成为一名能力强劲的独立开发者（

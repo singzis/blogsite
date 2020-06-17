@@ -1,7 +1,7 @@
 ---
 title: "阿里云轻应用服务器部署 nextjs 项目"
 text: "nextjs 是一个基于 react 服务端渲染的应用框架。这里打算用 nextjs 配合 react hook 写一个博客，但是发现部署并没有 nextjs 官方文档写的那么简单（是我太菜了），所以踩坑需要记录一下"
-category: "server"
+category: "project,js,javascript,react"
 date: "2020-05-22"
 ---
 

@@ -120,10 +120,14 @@ export default function SearchComp({ allPostsData }) {
             flex-direction: column;
           }
           .search-box {
-            padding: 20px 0;
+            padding: 10px 0;
           }
           .search-tags {
             margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            height: 50px;
+            align-content: space-between;
           }
           .search-list {
             flex-grow: 1;
@@ -134,7 +138,7 @@ export default function SearchComp({ allPostsData }) {
             justify-content: center;
           }
           .pagination {
-            margin-top: 20px;
+            margin-top: 15px;
           }
           .no-data {
             padding-top: 60px;

@@ -1,7 +1,7 @@
 ---
 title: "class的公有方法和私有方法"
 text: "静态公有方法和实例公有方法都是可编辑的，不可遍历的，可配置的。它们是类在构造时通过`Object.defineProperty`添加到类上的，因为类的本质就是基于原型链的语法糖，所以它们参与原型的继承（公有属性的规则同方法，但是属性是可遍历的）。"
-category: "javascript"
+category: "javascript,js"
 date: "2020-05-27"
 ---
 
