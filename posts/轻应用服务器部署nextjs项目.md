@@ -83,6 +83,10 @@ export default function Layout(props) {
 
 ## 部署
 
+Next.js 可以部署到任何支持 Node.js 的托管提供程序。
+
+首先得保证环境是正确配置的。
+
 ### node 安装和配置
 
 这里用的服务器，是基于 CentOS 镜像创建的 nodejs 应用服务器。
@@ -170,13 +174,56 @@ nginx -s reload
 
 ### next 文件打包
 
-官方提供的命令`next build`可以打包项目，官方配置下可以通过`next start`启动构建的项目。打包后的文件会存放在`.next`文件下，也可以通过设置`next.config.js`[自定义构建目录](https://www.nextjs.cn/docs/api-reference/next.config.js/setting-a-custom-build-directory)：
+官方提供的命令`next build`可以直接打包项目。
+
+打包构建后需要的文件：
+
+- .next
+- pages
+- public
+- package.json
+
+然后把这些文件放到你想放的位置，比如之前说的`/usr/share/nginx/html`下。最棒的方法还是从代码托管平台拉取代码，后期也可以直接写命令拉取+打包一步到位，然后我们需要在文件里安装依赖：
+
+```shell
+npm install
+```
+
+然后就是项目的启动，这里分两种方式来启动项目。
+
+#### next start 启动项目
+
+这是官方主推的一个项目启动方式，要求是`package.json`文件中的有这样的脚本启动命令：
+
+```json
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  }
+}
+```
+
+通过 node 启动项目：
+
+```shell
+npm run start
+```
+
+#### 自定义服务器启动项目
+
+官方也有对自定义服务器启动项目做介绍，我这里也实践过，说实话访问速度十分慢，具体原因其实我也不明白，估计是我服务器这块知识太差了，所以还是建议使用正常的启动项目的命令。
+
+打包后的文件会存放在`.next`文件下，也可以通过设置`next.config.js`[自定义构建目录](https://www.nextjs.cn/docs/api-reference/next.config.js/setting-a-custom-build-directory)：
 
 ```js
 module.exports = {
   distDir: "build", // or dist
 };
 ```
+
+这样打包后生成的文件都会归入`build`文件下面，建议使用`.next`
 
 因为这里是使用的自定义服务器来运行 nextjs 项目的，根据[官方文档](https://www.nextjs.cn/docs/advanced-features/custom-server)，我们需要创建`server.js`作为 node 的入口文件：
 
@@ -202,9 +249,9 @@ app.prepare().then(() => {
     } else {
       handle(req, res, parsedUrl);
     }
-  }).listen(3001, (err) => {
+  }).listen(3000, (err) => {
     if (err) throw err;
-    console.log("> Next_blog ready on http://localhost:3001");
+    console.log("> Next_blog ready on http://localhost:3000");
   });
 });
 ```
@@ -221,30 +268,20 @@ app.prepare().then(() => {
 }
 ```
 
-构建后需要上传的文件：
+所以需要的文件还包括：
 
-- .next
-- pages
-- public
-- next.config.js（如果有的话）
-- server.js（nodejs 入口文件）
-- package.json
-
-然后把这些文件放到你想放的位置，比如之前说的`/usr/share/nginx/html`下。然后我们需要在文件里安装依赖：
-
-```shell
-npm install
-```
+- next.config.js
+- server.js
 
 通过 node 启动项目：
 
 ```shell
-node server.js
+npm run start
 ```
 
 然后你可以通过 ip 或者解析的域名来访问，成功显示页面内容则配置成功。
 
-到了这里就会存在一个问题，就是当我们退出远程链接服务器的窗口后，node 启动的项目就会关闭，这里就需要使用 pm2 来管理项目。
+到了这里就会存在一个问题，就是当我们退出远程链接服务器的窗口后，node 启动的项目就会关闭，所以这里我们通过使用 pm2 来管理 node 项目。
 
 ### pm2 安装
 
@@ -265,9 +302,11 @@ pm2 delete server    # 删除server
 
 ```shell
 pm2 start server.js
+# 或者
+pm2 start --name next npm -- start --watch
 ```
 
-通过`pm2 logs`或者`pm2 list`可以查看项目启动情况，或者直接访问 ip 来查看。
+然后可以直接访问 ip 或者域名 来查看项目是否启动成功。
 
 ---
 
