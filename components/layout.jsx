@@ -30,10 +30,10 @@ export default function Layout(props) {
       <style jsx>{`
         .layout {
           flex-grow: 1;
-          padding-top: 80px;
           padding-bottom: 106px;
           position: relative;
           display: flex;
+          flex-wrap: wrap;
           justify-content: center;
         }
         .wrap {
@@ -61,7 +61,7 @@ export default function Layout(props) {
           height: calc(100vh - 230px);
           position: -webkit-sticky;
           position: sticky;
-          top: 100px;
+          top: 20px;
           overflow: scroll;
         }
         .main-content {

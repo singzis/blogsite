@@ -31,7 +31,7 @@ export default function Post({
         <title>{title}</title>
       </Head>
       <article>
-        <div className="title">{title}</div>
+        <h1 className="title">{title}</h1>
         <div className="date">
           发布于
           <Date dateString={date} />

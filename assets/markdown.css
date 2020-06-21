@@ -1,4 +1,10 @@
-h1,
+h1 {
+    color: #1c1e26;
+    line-height: 2em;
+    position: relative;
+    font-size: 32px;
+}
+
 h2,
 h3,
 h4,
@@ -9,7 +15,6 @@ h5 {
     position: relative;
 }
 
-h1:hover::before,
 h2:hover::before,
 h3:hover::before,
 h4:hover::before,
@@ -19,14 +24,6 @@ h5:hover::before {
     transform: translateX(-110%);
     color: #ffcc00;
     opacity: 0.85;
-}
-
-h1 {
-    font-size: 32px;
-}
-
-h1:hover::before {
-    content: "H1:";
 }
 
 h2 {

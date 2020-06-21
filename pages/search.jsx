@@ -89,7 +89,7 @@ export default function SearchComp({ allPostsData }) {
           </div>
         </div>
         <div className="search-list">
-          {true ? (
+          {currentList.length > 0 ? (
             <div className="list">
               {currentList.map((cur) => (
                 <SearchItem key={cur.id} {...cur} />

@@ -1,9 +1,14 @@
+@font-face {
+    font-family: "mononoki";
+    src: url("./fonts/mononoki-Regular.ttf");
+}
+
 html {
     height: 100%;
 }
 
 body {
-    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', 'Microsoft YaHei', '宋体', sans-serif;
+    font-family: 'Hiragino Sans GB', 'Heiti SC', 'Helvetica', 'Arial', 'Microsoft YaHei', '宋体', sans-serif;
     min-height: 100%;
     position: relative;
     color: rgba(0, 0, 0, 0.85);
