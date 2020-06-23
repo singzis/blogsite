@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Date from "./date";
 
-export default function SearchItem({ id, date, title }) {
+export default function SearchItem({ slug, date, title }) {
   return (
     <div className="item">
       <div className="post">
-        <Link href="/posts/[id]" as={`/posts/${id}`}>
+        <Link href="/posts/[...slug]" as={`/posts/${slug.join('/')}`}>
           <a className="post-text">{title}</a>
         </Link>
       </div>

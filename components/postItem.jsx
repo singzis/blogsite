@@ -3,12 +3,12 @@ import Link from "next/link";
 import Tag from "./tag";
 import Date from "../components/date";
 
-export default function PostItem({ id, date, title, text, category }) {
+export default function PostItem({ slug, date, title, text, category }) {
   const cates = category.split(",");
   return (
     <div className="item">
       <div className="title">
-        <Link href="/posts/[id]" as={`/posts/${id}`}>
+        <Link href="/posts/[...slug]" as={`/posts/${slug.join('/')}`}>
           <a>{title}</a>
         </Link>
       </div>
@@ -22,7 +22,7 @@ export default function PostItem({ id, date, title, text, category }) {
         <span className="date">
           <Date dateString={date} />
         </span>
-        <Link href="/posts/[id]" as={`/posts/${id}`}>
+        <Link href="/posts/[...slug]" as={`/posts/${slug.join('/')}`}>
           <a className="read">
             Read <ReadOutlined />
           </a>
