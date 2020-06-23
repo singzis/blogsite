@@ -1,6 +1,6 @@
 # 个人博客源码
 
-欢迎访问[网站主页](blog.zxingis.com)
+欢迎访问[网站主页](http://blog.zxingis.com)
 
 技术框架：[Hooks](https://reactjs.org/docs/hooks-intro.html) + [Nextjs](https://www.nextjs.cn/)
 
