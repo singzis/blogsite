@@ -1,6 +1,6 @@
 ---
 title: "hook总结"
-text: "useState返回一个state，和更新该state的函数在组件初始渲染时，会接收一个值initialState作为初始state，可以组件内任意位置使用该state..."
+text: "useState返回一个state，和更新该state的函数在组件初始渲染时，会接收一个值initialState作为初始state，可以组件内任意位置使用该state"
 category: "react,hook,javascript,js"
 date: "2020-03-13"
 ---

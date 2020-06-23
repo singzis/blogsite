@@ -26,7 +26,7 @@ export default function Post({
     });
   }, [contentHtml]);
   return (
-    <Layout>
+    <Layout full>
       <Head>
         <title>{title}</title>
       </Head>

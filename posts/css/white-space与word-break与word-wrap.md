@@ -1,6 +1,6 @@
 ---
 title: "css 字符相关处理"
-text: "white-space,用于设置如何处理元素中空白"
+text: "white-space，用于设置如何处理元素中空白"
 category: "css,css3"
 date: "2020-05-07"
 ---

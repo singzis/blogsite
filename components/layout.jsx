@@ -19,10 +19,16 @@ export default function Layout(props) {
       <div className="wrap"></div>
       <div className="main">
         <div className="main-box">
-          <aside className="main-personal">
-            <Personal />
-          </aside>
-          <div className="main-content">{props.children}</div>
+          {props.full ? (
+            <div className="main-full">{props.children}</div>
+          ) : (
+            <>
+              <aside className="main-personal">
+                <Personal />
+              </aside>
+              <div className="main-content">{props.children}</div>
+            </>
+          )}
         </div>
       </div>
       <Footer />
@@ -67,6 +73,10 @@ export default function Layout(props) {
         .main-content {
           width: calc(100% - 300px);
           padding: 0 0 20px 40px;
+        }
+        .main-full {
+          width: calc(100% - 200px);
+          padding-bottom: 20px;
         }
       `}</style>
     </div>

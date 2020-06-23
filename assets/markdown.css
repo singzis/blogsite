@@ -51,7 +51,7 @@ h4:hover::before {
 }
 
 h5 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h5:hover::before {
@@ -73,7 +73,7 @@ ul ol {
 }
 
 li {
-    font-size: 16px;
+    font-size: 18px;
     list-style: disc;
     margin: 0.5em 0;
 }
@@ -98,14 +98,13 @@ blockquote p {
 strong code {
     background-color: #faebd8;
     padding: 0 5px;
-    line-height: 16px;
+    line-height: 18px;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 2em;
     text-align: justify;
-    word-spacing: 6px;
     margin: 20px 0;
     color: #262626;
 }
@@ -125,7 +124,7 @@ pre {
 }
 
 pre code {
-    font-size: 16px;
+    font-size: 18px;
     white-space: pre;
     -webkit-column-break-inside: avoid-column;
     border-left: 5px solid #ffcc00;

@@ -90,10 +90,12 @@ export default function SearchComp({ allPostsData }) {
         </div>
         <div className="search-list">
           {currentList.length > 0 ? (
-            <div className="list">
-              {currentList.map((cur) => (
-                <SearchItem key={cur.id} {...cur} />
-              ))}
+            <div className="list-box">
+              <div className="list">
+                {currentList.map((cur) => (
+                  <SearchItem key={cur.id} {...cur} />
+                ))}
+              </div>
               <div className="pagination">
                 <Pagination
                   size="small"
@@ -133,12 +135,16 @@ export default function SearchComp({ allPostsData }) {
             flex-grow: 1;
           }
           .list {
+            min-height: 270px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            align-content: flex-start;
           }
           .pagination {
-            margin-top: 15px;
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
           }
           .no-data {
             padding-top: 60px;

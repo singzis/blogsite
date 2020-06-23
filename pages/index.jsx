@@ -12,7 +12,7 @@ export default function Index({ allPostsData }) {
         <title>singz72's blog</title>
       </Heade>
       <section>
-        {allPostsData.map((cur) => (
+        {allPostsData.slice(0, 10).map((cur) => (
           <PostItem key={cur.id} {...cur} />
         ))}
         <Link href="/search">

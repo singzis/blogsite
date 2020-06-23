@@ -1,6 +1,6 @@
 ---
 title: "useEffect 使用总结"
-text: "props 或者 state 的更新会触发组件的重新渲染，每次渲染都会有它自己的 effct，且 effect 会捕获专属于它自己的数据流 props 和 state，而且每个 effect 中的数据都不同于以往..."
+text: "props 或者 state 的更新会触发组件的重新渲染，每次渲染都会有它自己的 effct，且 effect 会捕获专属于它自己的数据流 props 和 state，而且每个 effect 中的数据都不同于以往"
 category: "react,hook,javascript,js"
 date: "2020-03-19"
 ---

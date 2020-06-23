@@ -1,6 +1,6 @@
 ---
 title: "cookie、session、token 和 JWT 总结"
-text: "cookie 由服务端提供，保存在浏览器，每次访问服务端时带上 cookie，用以告知服务端两次请求是否来自同一浏览器，比如保持用户登录状态。"
+text: "cookie 由服务端提供，保存在浏览器，每次访问服务端时带上 cookie，用以告知服务端两次请求是否来自同一浏览器，比如保持用户登录状态"
 category: "javascript,js,project"
 date: "2020-05-12"
 ---
