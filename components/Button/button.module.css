@@ -1,0 +1,10 @@
+.blog-btn {
+  background-color: #1c1e26;
+  border-color: #1c1e26;
+}
+.blog-btn:hover,
+.blog-btn:focus {
+  background: #1c1e26;
+  border-color: #1c1e26;
+  color: #ffcc00;
+}

@@ -37,12 +37,12 @@ export default function Personal() {
             <a href="mailto:singzochn@gmail.com">singzochn@gmail.com</a>
           </span>
         </div>
-        <div className="info-col">
+        {/* <div className="info-col">
           <WechatOutlined />
           <Popover content={wechatQr} placement="bottom">
             <span className="info-col-text">singzois</span>
           </Popover>
-        </div>
+        </div> */}
         <div className="info-col">
           <GithubOutlined />
           <span className="info-col-text">

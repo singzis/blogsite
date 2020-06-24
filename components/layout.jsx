@@ -35,12 +35,11 @@ export default function Layout(props) {
       <BackToTop />
       <style jsx>{`
         .layout {
-          flex-grow: 1;
-          padding-bottom: 106px;
+          min-height: 100vh;
           position: relative;
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
+          flex-direction: column;
         }
         .wrap {
           position: fixed;
@@ -54,10 +53,13 @@ export default function Layout(props) {
         }
         .main {
           width: 100%;
+          flex: 1;
+          display: flex;
         }
         .main-box {
           width: 75%;
           max-width: 1000px;
+          min-height: 100%;
           margin: 20px auto;
           display: flex;
           position: relative;

@@ -1,6 +1,6 @@
 import Heade from "next/head";
 import Link from "next/link";
-import { Button } from "antd";
+import Button from "../components/Button/button";
 import Layout from "../components/layout";
 import PostItem from "../components/postItem";
 import { getSortedPostsData } from "../lib/posts";
@@ -26,18 +26,6 @@ export default function Index({ allPostsData }) {
             margin-top: 20px;
             display: flex;
             justify-content: center;
-          }
-        `}</style>
-        <style global jsx>{`
-          .more .ant-btn-primary {
-            background-color: #1c1e26;
-            border-color: #1c1e26;
-          }
-          .more .ant-btn-primary:hover,
-          .more .ant-btn-primary:focus {
-            background: #1c1e26;
-            border-color: #1c1e26;
-            color: #ffcc00;
           }
         `}</style>
       </section>

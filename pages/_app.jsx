@@ -5,5 +5,5 @@ import "../assets/styles.css";
 import "../assets/markdown.css"
 
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} style={{ height: "100%" }} />;
+  return <Component {...pageProps} />;
 }

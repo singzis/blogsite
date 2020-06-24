@@ -15,8 +15,6 @@ export default function Footer() {
       </a>
       <style jsx>{`
         .footer {
-          position: absolute;
-          bottom: 0;
           width: 100%;
           padding: 20px 0;
           background-color: #1c1e26;
@@ -25,11 +23,7 @@ export default function Footer() {
           align-items: center;
           color: #f7f7f7;
           font-size: 14px;
-        }
-        .text {
-           {
-            /* margin-bottom: 10px; */
-          }
+          z-index: 1;
         }
         .blog-name {
           text-decoration: underline;
