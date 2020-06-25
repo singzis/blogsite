@@ -2,7 +2,7 @@ import Router from "next/router";
 import Layout from "../components/layout";
 import Button from "../components/Button/button";
 
-export default function Custom404(props) {
+export default function Custom404() {
   const goBack = () => {
     Router.back();
   };
