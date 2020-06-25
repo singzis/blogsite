@@ -27,8 +27,11 @@ a {
     cursor: pointer;
 }
 
-a:hover,
+a:hover {
+    color: #ffcc00;
+}
+
 a:focus,
 a:active {
-    color: #ffcc00;
+    color: inhreit;
 }

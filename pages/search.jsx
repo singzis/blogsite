@@ -1,12 +1,12 @@
 import Raect, { useState } from "react";
 import Head from "next/head";
-import { Input } from "antd";
 import { cloneDeep, indexOf, debounce } from "lodash";
 import Layout from "../components/layout";
 import Tag from "../components/tag";
 import NoData from "../components/noData";
 import SearchItem from "../components/searchItem";
 import Pagination from "../components/pagination";
+import Input from "../components/Input/input";
 import { INIT_LANGUAGE } from "../lib/init";
 import { sortedPostsData } from "../lib/posts";
 
@@ -148,16 +148,6 @@ export default function SearchComp({ allPostsData }) {
           }
           .no-data {
             padding-top: 60px;
-          }
-        `}</style>
-        <style global jsx>{`
-          .search-input .ant-input-affix-wrapper:hover,
-          .search-input .ant-input-affix-wrapper:focus {
-            border-color: #ffcc00;
-          }
-          .search-input .ant-input-affix-wrapper-focused {
-            border-color: #ffcc00;
-            box-shadow: 0 0 0 2px rgba(255, 180, 0, 0.2);
           }
         `}</style>
       </div>
