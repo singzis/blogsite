@@ -24,8 +24,7 @@ export default function Personal() {
         <div className="name">SINGZ72</div>
         <div className="desc">
           🥳 🥳 🥳
-          不断完善自身，以寻求正确之路。希望有朝一日能够成为一名能力强劲的独立开发者（
-          React 天下第一 😈）
+          目标只是过程的终点🏁一切的行为都应遵守约定。学习就是为了完善自身，是为了走的更远，在某天我也会是一名优秀的开发者
         </div>
         <div className="info-col">
           <EnvironmentFilled />

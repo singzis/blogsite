@@ -1,9 +1,9 @@
-import { Pagination as P } from "antd";
+import { Pagination as Pgnt } from "antd";
 
 export default function Pagination(props) {
   return (
     <div className="pagination">
-      <P {...props} />
+      <Pgnt {...props} />
       <style jsx>{`
         .pagination {
           display: inline-block;

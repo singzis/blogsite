@@ -6,7 +6,7 @@ import Tag from "../components/tag";
 import NoData from "../components/noData";
 import SearchItem from "../components/searchItem";
 import Pagination from "../components/pagination";
-import Input from "../components/Input/input";
+import Input from "../components/input";
 import { INIT_LANGUAGE } from "../lib/init";
 import { sortedPostsData } from "../lib/posts";
 
