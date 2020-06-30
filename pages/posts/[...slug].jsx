@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import css from "highlight.js/lib/languages/css";
@@ -12,7 +13,13 @@ import Tag from "../../components/tag";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
 export default function Post({
-  postData: { title, date, contentHtml, category },
+  postData: {
+    title,
+    date,
+    contentHtml,
+    category,
+    nearPosts: { prevPost, nextPost },
+  },
 }) {
   useEffect(() => {
     hljs.registerLanguage("javascript", javascript);
@@ -45,6 +52,24 @@ export default function Post({
           className="content"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         ></div>
+        <div className="near-posts">
+          {prevPost ? (
+            <Link
+              href="/posts/[...slug]"
+              as={`/posts/${prevPost.slug.join("/")}`}
+            >
+              <a>上一篇：{prevPost.title}</a>
+            </Link>
+          ) : null}
+          {nextPost ? (
+            <Link
+              href="/posts/[...slug]"
+              as={`/posts/${nextPost.slug.join("/")}`}
+            >
+              <a>下一篇：{nextPost.title}</a>
+            </Link>
+          ) : null}
+        </div>
       </article>
       <style jsx>{`
         .title {
@@ -60,12 +85,17 @@ export default function Post({
         .content {
           margin-top: 40px;
         }
+        .near-posts {
+          margin-top: 80px;
+          display: flex;
+          flex-direction: column;
+        }
       `}</style>
     </Layout>
   );
 }
 
-export async function getStaticPaths() {
+export function getStaticPaths() {
   const paths = getAllPostIds();
   return {
     paths,

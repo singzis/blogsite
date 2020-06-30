@@ -1,9 +1,9 @@
 import Heade from "next/head";
 import Link from "next/link";
-import Button from "../components/Button/button";
+import Button from "../components/button";
 import Layout from "../components/layout";
 import PostItem from "../components/postItem";
-import { getSortedPostsData } from "../lib/posts";
+import { sortedPostsData } from "../lib/posts";
 
 export default function Index({ allPostsData }) {
   return (
@@ -36,7 +36,7 @@ export default function Index({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = sortedPostsData;
   return {
     props: { allPostsData },
   };
