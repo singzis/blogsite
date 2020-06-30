@@ -41,6 +41,17 @@ li {
     list-style: none;
 }
 
+/*去除button的默认样式*/
+
+button {
+    border-width: 0px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0px;
+}
+
 
 /*去掉底部横线*/
 

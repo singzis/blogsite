@@ -15,11 +15,13 @@ export default function Index({ allPostsData }) {
         {allPostsData.slice(0, 10).map((cur) => (
           <PostItem key={cur.id} {...cur} />
         ))}
-        <Link href="/search">
-          <a className="more">
-            <Button type="primary">更多</Button>
-          </a>
-        </Link>
+        <div className="more">
+          <Link href="/search">
+            <a>
+              <Button>更多</Button>
+            </a>
+          </Link>
+        </div>
         <style jsx>{`
           .more {
             width: 100%;

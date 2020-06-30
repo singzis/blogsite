@@ -12,7 +12,7 @@ export default function Custom404(props) {
         <div>
           <div className="title404">Uh ohhh!</div>
           <div className="tips">你访问的页面不见了！</div>
-          <Button type="primary" onClick={goBack}>
+          <Button onClick={goBack}>
             回到过去
           </Button>
         </div>

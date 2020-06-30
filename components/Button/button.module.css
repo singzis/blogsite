@@ -1,10 +1,11 @@
-.blog-btn {
-  background-color: #1c1e26;
-  border-color: #1c1e26;
+.blog_btn-button {
+  color: #1c1e26;
+  border-radius: 5px;
+  padding: 0 16px;
+  line-height: 32px;
+  background-image: linear-gradient(to bottom, #ffcc66, #ffcc00);
 }
-.blog-btn:hover,
-.blog-btn:focus {
-  background: #1c1e26;
-  border-color: #1c1e26;
-  color: #ffcc00;
+.blog_btn-button:hover,
+.blog_btn-button:focus {
+  background-image: linear-gradient(to bottom, #ffcc00, #ffbb00);
 }

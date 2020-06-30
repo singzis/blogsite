@@ -1,6 +1,9 @@
-import { Button } from "antd";
 import styles from "./button.module.css";
 
-export default function Btn(props) {
-  return <Button {...props} className={styles[`blog-btn`]}>{props.children}</Button>;
+export default function BlogBtn(props) {
+  return (
+    <button {...props} className={styles["blog_btn-button"]}>
+      {props.children}
+    </button>
+  );
 }
