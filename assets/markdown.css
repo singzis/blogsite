@@ -27,7 +27,7 @@ h5:hover::before {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 h2:hover::before {
@@ -35,7 +35,7 @@ h2:hover::before {
 }
 
 h3 {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 h3:hover::before {
@@ -43,7 +43,7 @@ h3:hover::before {
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 h4:hover::before {
@@ -51,7 +51,7 @@ h4:hover::before {
 }
 
 h5 {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 h5:hover::before {

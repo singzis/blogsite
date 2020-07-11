@@ -7,6 +7,7 @@ import css from "highlight.js/lib/languages/css";
 import shell from "highlight.js/lib/languages/shell";
 import nginx from "highlight.js/lib/languages/nginx";
 import json from "highlight.js/lib/languages/json";
+import http from "highlight.js/lib/languages/http";
 import Layout from "../../components/layout";
 import Date from "../../components/date";
 import Tag from "../../components/tag";
@@ -27,6 +28,7 @@ export default function Post({
     hljs.registerLanguage("css", css);
     hljs.registerLanguage("nginx", nginx);
     hljs.registerLanguage("json", json);
+    hljs.registerLanguage("http", http);
     let blocks = document.querySelectorAll("pre code");
     blocks.forEach((node) => {
       hljs.highlightBlock(node);
