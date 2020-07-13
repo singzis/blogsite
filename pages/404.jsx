@@ -1,6 +1,6 @@
 import Router from "next/router";
 import Layout from "../components/layout";
-import Button from "../components/Button/button";
+import Button from "../components/button/button";
 
 export default function Custom404() {
   const goBack = () => {

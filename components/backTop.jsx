@@ -1,14 +1,14 @@
-import { BackTop } from "antd";
+import { BackTop as Bt } from "antd";
 import { CaretUpFilled } from "@ant-design/icons";
 
-export default function BackToTop() {
+export default function BackTop() {
   return (
     <>
-      <BackTop>
+      <Bt>
         <div className="back-top">
           <CaretUpFilled style={{ color: "#f6f6f6", fontSize: "28px" }} />
         </div>
-      </BackTop>
+      </Bt>
       <style jsx>{`
         .back-top {
           height: 40px;

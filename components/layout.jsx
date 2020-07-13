@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 import Personal from "./personal";
-import BackToTop from "./backToTop";
+import BackTop from "./backTop";
 
 export default function Layout(props) {
   return (
@@ -32,7 +32,7 @@ export default function Layout(props) {
         </div>
       </div>
       <Footer />
-      <BackToTop />
+      <BackTop />
       <style jsx>{`
         .layout {
           min-height: 100vh;
