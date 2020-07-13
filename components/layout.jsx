@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
+// import Header from "./Header";
+// import Footer from "./Footer";
 import Personal from "./personal";
 import BackTop from "./backTop";
 
