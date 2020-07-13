@@ -1,6 +1,6 @@
 import Router from "next/router";
 import Layout from "../components/layout";
-import Button from "../components/button";
+import Button from "../components/Button/button";
 
 export default function Custom404() {
   const goBack = () => {
@@ -12,9 +12,7 @@ export default function Custom404() {
         <div>
           <div className="title404">Uh ohhh!</div>
           <div className="tips">你访问的页面不见了！</div>
-          <Button onClick={goBack}>
-            回到过去
-          </Button>
+          <Button onClick={goBack}>回到过去</Button>
         </div>
         <style jsx>{`
           .custom404 {

@@ -1,6 +1,6 @@
 import Heade from "next/head";
 import Link from "next/link";
-import Button from "../components/button";
+import Button from "../components/Button/button";
 import Layout from "../components/layout";
 import PostItem from "../components/postItem";
 import { sortedPostsData } from "../lib/posts";
